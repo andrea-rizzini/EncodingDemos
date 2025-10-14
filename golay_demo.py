@@ -28,5 +28,5 @@ D = C.decoder()  # default decoder (metric: Hamming)
 m_hat = D.decode_to_message(r)
 
 print("Decoded message:")
-print(C)          # [23, 12, 7] Golay code over GF(2)
+print(m_hat)          # [23, 12, 7] Golay code over GF(2)
 print(m == m_hat) # True
