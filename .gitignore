@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .venv/
 .env
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
