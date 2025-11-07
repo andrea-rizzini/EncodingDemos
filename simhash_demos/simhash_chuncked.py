@@ -1,10 +1,10 @@
 import re
 from simhash import Simhash, SimhashIndex
 
-F = 128
+F = 64
 
 def get_features(s):
-    width = 3
+    width = 2
     s = s.lower()
     s = re.sub(r'[^\w]+', '', s)
     return [s[i:i + width] for i in range(max(len(s) - width + 1, 1))]
