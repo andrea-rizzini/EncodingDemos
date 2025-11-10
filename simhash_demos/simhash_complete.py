@@ -31,6 +31,13 @@ def open_maybe_compressed(path: str, mode: str):
         return open(p, "rb")
     return open(p, "rt", encoding="utf-8", errors="ignore")
 
+def sign_from_vec(vec):
+    out = 0
+    for i, s in enumerate(vec):
+        if s > 0:
+            out |= (1 << i)
+    return out
+
 # ---------- TEXT MODE (token or n-gram tokens) ----------
 WORD_RE = re.compile(r"\w+", re.UNICODE)
 
@@ -62,10 +69,7 @@ def simhash_text(path, bitlen=64, ngram=3, weight_fn=None, chunk_size=None):
             h = hash_feature_bytes(feat.encode("utf-8", "ignore"), bitlen=bitlen)
             for i in range(bitlen):
                 vec[i] += w if (h >> i) & 1 else -w # if the i-th bit is 1 add weight else subtract
-    out = 0
-    for i, s in enumerate(vec):
-        if s > 0:
-            out |= (1 << i)
+    out = sign_from_vec(vec)
     return out
 
 # ---------- BYTES MODE (byte n-grams) ----------
@@ -94,49 +98,7 @@ def simhash_bytes(path, bitlen=64, n=7, step=1, chunk_size=1<<20, weight_fn=None
             h = hash_feature_bytes(gram, bitlen=bitlen)
             for i in range(bitlen):
                 vec[i] += w if (h >> i) & 1 else -w
-    out = 0
-    for i, s in enumerate(vec):
-        if s > 0:
-            out |= (1 << i)
-    return out
-
-# ---------- BITS MODE (pure bit windows) ----------
-def stream_bit_windows_fh(fh, nbits=64, step_bits=1, chunk_size=1<<20):
-    assert nbits >= 1 and step_bits >= 1
-    mask = (1 << nbits) - 1
-    buf = 0
-    buf_len = 0
-    while True:
-        data = fh.read(chunk_size)
-        if not data:
-            break
-        for byte in data:
-            buf = (buf << 8) | byte
-            buf_len += 8
-            while buf_len >= nbits:
-                window_bits = (buf >> (buf_len - nbits)) & mask
-                out = window_bits.to_bytes((nbits + 7) // 8, "big")
-                yield out
-                buf_len -= step_bits
-                if buf_len > 0:
-                    buf &= (1 << buf_len) - 1
-                else:
-                    buf = 0
-
-def simhash_bits(path, bitlen=64, nbits=64, step_bits=1, chunk_size=1<<20, weight_fn=None):
-    vec = [0] * bitlen
-    with open_maybe_compressed(path, "rb") as fh:
-        for gram_bits in stream_bit_windows_fh(fh, nbits=nbits, step_bits=step_bits, chunk_size=chunk_size):
-            w = 1 if weight_fn is None else weight_fn(gram_bits)
-            if not w:
-                continue
-            h = hash_feature_bytes(gram_bits, bitlen=bitlen)
-            for i in range(bitlen):
-                vec[i] += w if (h >> i) & 1 else -w
-    out = 0
-    for i, s in enumerate(vec):
-        if s > 0:
-            out |= (1 << i)
+    out = sign_from_vec(vec)
     return out
 
 # ---------- CLI ----------
@@ -170,24 +132,19 @@ def to_fixed_hex(h: int, bitlen: int) -> str:
 def main():
     ap = argparse.ArgumentParser(description="Streamed SimHash for files, stdin, and directories.")
     ap.add_argument("paths", nargs="+", help="Files/dirs/globs or '-' for stdin")
-    ap.add_argument("--mode", choices=["text", "bytes", "bits"], default="bytes",
-                    help="Feature mode: text tokens, byte n-grams, or bit windows (default: bytes)")
+    ap.add_argument("--mode", choices=["text", "bytes"], default="bytes",
+                    help="Feature mode: text tokens or byte n-grams (default: bytes)")
     ap.add_argument("--bitlen", type=int, default=128, help="Output hash bit length (64/128)")
     ap.add_argument("--ngram", type=int, default=7, help="[text/bytes] token/byte n-gram size")
-    ap.add_argument("--nbits", type=int, default=64, help="[bits] bit-window length")
     ap.add_argument("--step", type=int, default=1, help="[bytes] slide step in bytes")
-    ap.add_argument("--step-bits", type=int, default=1, help="[bits] slide step in bits")
     ap.add_argument("--chunk-size", type=int, default=1<<20, help="Read size per chunk (bytes)")
     ap.add_argument("--recursive", action="store_true", help="Recurse into directories")
     ap.add_argument("--json", action="store_true", help="Emit JSON lines instead of TSV")
     args = ap.parse_args()
 
-    for path in iter_input_paths(args.paths, recursive=args.recursive):
+    for path in iter_input_paths(args.paths, recursive=args.recursive): # todo: add multiple iterations, with a CLI flag
         if args.mode == "text":
             h = simhash_text(path, bitlen=args.bitlen, ngram=args.ngram)
-        elif args.mode == "bits":
-            h = simhash_bits(path, bitlen=args.bitlen, nbits=args.nbits,
-                             step_bits=args.step_bits, chunk_size=args.chunk_size)
         else:
             h = simhash_bytes(path, bitlen=args.bitlen, n=args.ngram,
                               step=args.step, chunk_size=args.chunk_size)
