@@ -142,7 +142,7 @@ def main():
     ap.add_argument("--json", action="store_true", help="Emit JSON lines instead of TSV")
     args = ap.parse_args()
 
-    for path in iter_input_paths(args.paths, recursive=args.recursive): # todo: add multiple iterations, with a CLI flag
+    for path in iter_input_paths(args.paths, recursive=args.recursive):
         if args.mode == "text":
             h = simhash_text(path, bitlen=args.bitlen, ngram=args.ngram)
         else:

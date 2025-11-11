@@ -63,3 +63,39 @@ d07f399c33709b2f5c77403c0b7d4ca2        128     bytes   modified.bin    block=27
 e50ca86135c593de4aeb7861e448ee1b        128     bytes   modified.bin    block=29        [1900544,1966080)
 99754d3cdfeeaf4263156fc64c6b9997        128     bytes   modified.bin    block=30        [1966080,2031616)
 31e17d8755882695394aae2766517836        128     bytes   modified.bin    block=31        [2031616,2097152)
+
+Note: After running the following commands:
+ 1) head -c 2M /dev/urandom > base.bin
+ 2) cp base.bin modified.bin
+ 3) for off in 262144 983040 1572864; do 
+        dd if=/dev/urandom of=modified.bin bs=1 seek=$off count=2048 conv=notrunc status=none
+    done
+
+the file modified.bin will differ from base.bin by approximately 6 KiB.
+
+If we then run simhash_complete_chunked.py with these files as input, the SimHashes for the three modified blocks will be 
+slightly different. Consider the Hamming distance, chunk by chunk:
+
+Block 4 [262144, 327680): 10 bits
+base 00d86734259c9b164b68d2e34fd0d041
+mod  00d8673525d89b5e4d4892e34fd0c041
+
+Block 15 [983040, 1048576): 10 bits
+base 01d1c8961c5364d9ac9abce1551ce635
+mod  01d9ca960c51745bac9abce0553cf635
+
+Block 24 [1572864, 1638400): 13 bits
+base eee6043493b54bbb5fe5e19a75ae24a1
+mod  afe60c5491b747bb5fe5c19a7daea0a1
+
+If we concatenate the 32 per-block SimHashes for each file (each SimHash is 16 bytes, so 32 × 16 = 512 bytes per file), 
+the Hamming distance between the two 512-byte sequences is 33 bits.
+
+Some calculations:
+
+1) 2MB (dimension of the file) = 2*10^6*8 bits =~ 16M bits
+2) 6KB (of changes) = 6*10^3*8 bits =~ 48K bits
+3) 16M / 48K =~ 333 (ratio)
+
+4) 512 bytes (dimension of the simhashes concatenated) = 512*8 bits = 4096 bits
+5) 4096 / 33 =~ 124 (ratio)
