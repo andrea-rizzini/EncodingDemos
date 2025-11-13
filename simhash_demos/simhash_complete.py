@@ -6,6 +6,7 @@ from collections import deque
 # ---------- hashing core ----------
 def hash_feature_bytes(b: bytes, bitlen=64) -> int:
     h = hashlib.blake2b(b, digest_size=bitlen // 8).digest()
+    # h = hashlib.md5(b).digest()
     return int.from_bytes(h, "big")
 
 def hamming_distance(a: int, b: int) -> int:

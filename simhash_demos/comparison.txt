@@ -1,68 +1,68 @@
-36d20c46793ec6e2b02245492072f5fb        128     bytes   base.bin        block=0 [0,65536)
-f8140c657e810938e28a8cdba3a5a07f        128     bytes   base.bin        block=1 [65536,131072)
-106f984e81b94dc7865766ef31fa7f81        128     bytes   base.bin        block=2 [131072,196608)
-e9dc082c0817e014c2283cb733666d10        128     bytes   base.bin        block=3 [196608,262144)
-00d86734259c9b164b68d2e34fd0d041        128     bytes   base.bin        block=4 [262144,327680)
-382f477a0efed175b0741340e4a87a6b        128     bytes   base.bin        block=5 [327680,393216)
-c0414bcc867028e64615e14dfb61549b        128     bytes   base.bin        block=6 [393216,458752)
-1a32e535e99b7a123e75a61b6b8c51e8        128     bytes   base.bin        block=7 [458752,524288)
-3ddfc0d6f81cfcf01e2306b408cb5ca1        128     bytes   base.bin        block=8 [524288,589824)
-e7cb382bae57fb31b6a800ae877a3f27        128     bytes   base.bin        block=9 [589824,655360)
-d6023d64687a49a4df64c0c9f64d6db2        128     bytes   base.bin        block=10        [655360,720896)
-87f9bd5b20bc0f3f6c91788d14c45a87        128     bytes   base.bin        block=11        [720896,786432)
-a8db079228a3eee29e175794125948b0        128     bytes   base.bin        block=12        [786432,851968)
-6157a71441e6f31b75248e3fc7b442d8        128     bytes   base.bin        block=13        [851968,917504)
-fc87e5e99cb4c7607b1be59cb992c39c        128     bytes   base.bin        block=14        [917504,983040)
-01d1c8961c5364d9ac9abce1551ce635        128     bytes   base.bin        block=15        [983040,1048576)
-87645245b91d1d6e82113c5d0a09aa68        128     bytes   base.bin        block=16        [1048576,1114112)
-fa673ee98f9afc0fce9dd800e2557a5e        128     bytes   base.bin        block=17        [1114112,1179648)
-ef3bdb367e73025814d87b41be7633f4        128     bytes   base.bin        block=18        [1179648,1245184)
-0db31506977125294421c3ed37ba4a3e        128     bytes   base.bin        block=19        [1245184,1310720)
-b527804d238b5322d09ebafb13f5e011        128     bytes   base.bin        block=20        [1310720,1376256)
-b617ffa9a87b4591515aeb9c2e351c85        128     bytes   base.bin        block=21        [1376256,1441792)
-32ef968dae8584fc10e294c0c2ba6367        128     bytes   base.bin        block=22        [1441792,1507328)
-989c41c27b56ac9882be727accb871ca        128     bytes   base.bin        block=23        [1507328,1572864)
-eee6043493b54bbb5fe5e19a75ae24a1        128     bytes   base.bin        block=24        [1572864,1638400)
-d28c55cc5b1f9f32701c8dd8d3e0a95e        128     bytes   base.bin        block=25        [1638400,1703936)
-f6a7c23e8f85bef1e56beff3445ef53d        128     bytes   base.bin        block=26        [1703936,1769472)
-d07f399c33709b2f5c77403c0b7d4ca2        128     bytes   base.bin        block=27        [1769472,1835008)
-109e0e82e9541e29b87a0887f863f5fb        128     bytes   base.bin        block=28        [1835008,1900544)
-e50ca86135c593de4aeb7861e448ee1b        128     bytes   base.bin        block=29        [1900544,1966080)
-99754d3cdfeeaf4263156fc64c6b9997        128     bytes   base.bin        block=30        [1966080,2031616)
-31e17d8755882695394aae2766517836        128     bytes   base.bin        block=31        [2031616,2097152)
+b7426c0de2a9687dd185b05249d31c46        128     bytes   base.bin        block=0 [0,65536)
+27433e8cd1901a46e071804f7de8333c        128     bytes   base.bin        block=1 [65536,131072)
+03686c6447f0ceb44bd8dd5b16f5e97f        128     bytes   base.bin        block=2 [131072,196608)
+57eb47b640dc053181073e9f55dbe774        128     bytes   base.bin        block=3 [196608,262144)
+c5a4860acc182e79c0d3e330ea6850e2        128     bytes   base.bin        block=4 [262144,327680)
+93d12350bd3d9687639e14f43f0030d3        128     bytes   base.bin        block=5 [327680,393216)
+6bf8e9da203401e22785f56039eae24f        128     bytes   base.bin        block=6 [393216,458752)
+cda4e53a485244faede36bd65b279200        128     bytes   base.bin        block=7 [458752,524288)
+f041dbc340fbabe669f32215bd0badb3        128     bytes   base.bin        block=8 [524288,589824)
+d135015d673e41cbe4c916fe36a7fabc        128     bytes   base.bin        block=9 [589824,655360)
+3c42f876f612f8392f4d259897e9cf66        128     bytes   base.bin        block=10        [655360,720896)
+54b6a8982957b3edc3f3739b56ebbdc1        128     bytes   base.bin        block=11        [720896,786432)
+5fe905569c48c52bea7af60df36a5f51        128     bytes   base.bin        block=12        [786432,851968)
+227e9f468c9d7cf457e51018fadfae86        128     bytes   base.bin        block=13        [851968,917504)
+2834254a11d2754a12a9bde67812ec1b        128     bytes   base.bin        block=14        [917504,983040)
+fa792890b03704c93a12aac830881c74        128     bytes   base.bin        block=15        [983040,1048576)
+8e6927ab50aa8e64b5695d932ff93e70        128     bytes   base.bin        block=16        [1048576,1114112)
+203ac30ccdbfb020e5f8f0a553e43d2d        128     bytes   base.bin        block=17        [1114112,1179648)
+626940cd48e1e39788236fb9538153a9        128     bytes   base.bin        block=18        [1179648,1245184)
+6f20ab736e6893078a23dda185e19c6b        128     bytes   base.bin        block=19        [1245184,1310720)
+9cca38d00d4b0ab3e0ebee68be51214e        128     bytes   base.bin        block=20        [1310720,1376256)
+f176b7f30a203aa9c66556fcc5dc6208        128     bytes   base.bin        block=21        [1376256,1441792)
+b59bc0a5c3cfe1e24c98ed0c06976827        128     bytes   base.bin        block=22        [1441792,1507328)
+59d29ad60ca2ba17abb033e2e2f7f216        128     bytes   base.bin        block=23        [1507328,1572864)
+743fc6f909002c557255f198d56459f1        128     bytes   base.bin        block=24        [1572864,1638400)
+326be6a8cf206ba3bc714f1dea87e704        128     bytes   base.bin        block=25        [1638400,1703936)
+59d26b5867b37b9aa788afb9f9d4c20a        128     bytes   base.bin        block=26        [1703936,1769472)
+4a8e8a69e550c9c0342fbc63b8c64fb7        128     bytes   base.bin        block=27        [1769472,1835008)
+69cda7627223b13360f673d3599dcdcb        128     bytes   base.bin        block=28        [1835008,1900544)
+7340b08fd7274ecd2b557add2c407410        128     bytes   base.bin        block=29        [1900544,1966080)
+25aa8f17dafbd188a2a2f2cda93fc667        128     bytes   base.bin        block=30        [1966080,2031616)
+098a66509b8331cd67f92f8fbe02e712        128     bytes   base.bin        block=31        [2031616,2097152)
 
-36d20c46793ec6e2b02245492072f5fb        128     bytes   modified.bin    block=0 [0,65536)
-f8140c657e810938e28a8cdba3a5a07f        128     bytes   modified.bin    block=1 [65536,131072)
-106f984e81b94dc7865766ef31fa7f81        128     bytes   modified.bin    block=2 [131072,196608)
-e9dc082c0817e014c2283cb733666d10        128     bytes   modified.bin    block=3 [196608,262144)
-00d8673525d89b5e4d4892e34fd0c041        128     bytes   modified.bin    block=4 [262144,327680)
-382f477a0efed175b0741340e4a87a6b        128     bytes   modified.bin    block=5 [327680,393216)
-c0414bcc867028e64615e14dfb61549b        128     bytes   modified.bin    block=6 [393216,458752)
-1a32e535e99b7a123e75a61b6b8c51e8        128     bytes   modified.bin    block=7 [458752,524288)
-3ddfc0d6f81cfcf01e2306b408cb5ca1        128     bytes   modified.bin    block=8 [524288,589824)
-e7cb382bae57fb31b6a800ae877a3f27        128     bytes   modified.bin    block=9 [589824,655360)
-d6023d64687a49a4df64c0c9f64d6db2        128     bytes   modified.bin    block=10        [655360,720896)
-87f9bd5b20bc0f3f6c91788d14c45a87        128     bytes   modified.bin    block=11        [720896,786432)
-a8db079228a3eee29e175794125948b0        128     bytes   modified.bin    block=12        [786432,851968)
-6157a71441e6f31b75248e3fc7b442d8        128     bytes   modified.bin    block=13        [851968,917504)
-fc87e5e99cb4c7607b1be59cb992c39c        128     bytes   modified.bin    block=14        [917504,983040)
-01d9ca960c51745bac9abce0553cf635        128     bytes   modified.bin    block=15        [983040,1048576)
-87645245b91d1d6e82113c5d0a09aa68        128     bytes   modified.bin    block=16        [1048576,1114112)
-fa673ee98f9afc0fce9dd800e2557a5e        128     bytes   modified.bin    block=17        [1114112,1179648)
-ef3bdb367e73025814d87b41be7633f4        128     bytes   modified.bin    block=18        [1179648,1245184)
-0db31506977125294421c3ed37ba4a3e        128     bytes   modified.bin    block=19        [1245184,1310720)
-b527804d238b5322d09ebafb13f5e011        128     bytes   modified.bin    block=20        [1310720,1376256)
-b617ffa9a87b4591515aeb9c2e351c85        128     bytes   modified.bin    block=21        [1376256,1441792)
-32ef968dae8584fc10e294c0c2ba6367        128     bytes   modified.bin    block=22        [1441792,1507328)
-989c41c27b56ac9882be727accb871ca        128     bytes   modified.bin    block=23        [1507328,1572864)
-afe60c5491b747bb5fe5c19a7daea0a1        128     bytes   modified.bin    block=24        [1572864,1638400)
-d28c55cc5b1f9f32701c8dd8d3e0a95e        128     bytes   modified.bin    block=25        [1638400,1703936)
-f6a7c23e8f85bef1e56beff3445ef53d        128     bytes   modified.bin    block=26        [1703936,1769472)
-d07f399c33709b2f5c77403c0b7d4ca2        128     bytes   modified.bin    block=27        [1769472,1835008)
-109e0e82e9541e29b87a0887f863f5fb        128     bytes   modified.bin    block=28        [1835008,1900544)
-e50ca86135c593de4aeb7861e448ee1b        128     bytes   modified.bin    block=29        [1900544,1966080)
-99754d3cdfeeaf4263156fc64c6b9997        128     bytes   modified.bin    block=30        [1966080,2031616)
-31e17d8755882695394aae2766517836        128     bytes   modified.bin    block=31        [2031616,2097152)
+b7426c0de2a9687dd185b05249d31c46        128     bytes   modified.bin    block=0 [0,65536)
+27433e8cd1901a46e071804f7de8333c        128     bytes   modified.bin    block=1 [65536,131072)
+03686c6447f0ceb44bd8dd5b16f5e97f        128     bytes   modified.bin    block=2 [131072,196608)
+57eb47b640dc053181073e9f55dbe774        128     bytes   modified.bin    block=3 [196608,262144)
+c5a4870acc182e79c0d3e320ca695046        128     bytes   modified.bin    block=4 [262144,327680)
+93d12350bd3d9687639e14f43f0030d3        128     bytes   modified.bin    block=5 [327680,393216)
+6bf8e9da203401e22785f56039eae24f        128     bytes   modified.bin    block=6 [393216,458752)
+cda4e53a485244faede36bd65b279200        128     bytes   modified.bin    block=7 [458752,524288)
+f041dbc340fbabe669f32215bd0badb3        128     bytes   modified.bin    block=8 [524288,589824)
+d135015d673e41cbe4c916fe36a7fabc        128     bytes   modified.bin    block=9 [589824,655360)
+3c42f876f612f8392f4d259897e9cf66        128     bytes   modified.bin    block=10        [655360,720896)
+54b6a8982957b3edc3f3739b56ebbdc1        128     bytes   modified.bin    block=11        [720896,786432)
+5fe905569c48c52bea7af60df36a5f51        128     bytes   modified.bin    block=12        [786432,851968)
+227e9f468c9d7cf457e51018fadfae86        128     bytes   modified.bin    block=13        [851968,917504)
+2834254a11d2754a12a9bde67812ec1b        128     bytes   modified.bin    block=14        [917504,983040)
+ba792890b03725d93a92acc210881c74        128     bytes   modified.bin    block=15        [983040,1048576)
+8e6927ab50aa8e64b5695d932ff93e70        128     bytes   modified.bin    block=16        [1048576,1114112)
+203ac30ccdbfb020e5f8f0a553e43d2d        128     bytes   modified.bin    block=17        [1114112,1179648)
+626940cd48e1e39788236fb9538153a9        128     bytes   modified.bin    block=18        [1179648,1245184)
+6f20ab736e6893078a23dda185e19c6b        128     bytes   modified.bin    block=19        [1245184,1310720)
+9cca38d00d4b0ab3e0ebee68be51214e        128     bytes   modified.bin    block=20        [1310720,1376256)
+f176b7f30a203aa9c66556fcc5dc6208        128     bytes   modified.bin    block=21        [1376256,1441792)
+b59bc0a5c3cfe1e24c98ed0c06976827        128     bytes   modified.bin    block=22        [1441792,1507328)
+59d29ad60ca2ba17abb033e2e2f7f216        128     bytes   modified.bin    block=23        [1507328,1572864)
+743f46d9082028d57255f198d56879f0        128     bytes   modified.bin    block=24        [1572864,1638400)
+326be6a8cf206ba3bc714f1dea87e704        128     bytes   modified.bin    block=25        [1638400,1703936)
+59d26b5867b37b9aa788afb9f9d4c20a        128     bytes   modified.bin    block=26        [1703936,1769472)
+4a8e8a69e550c9c0342fbc63b8c64fb7        128     bytes   modified.bin    block=27        [1769472,1835008)
+69cda7627223b13360f673d3599dcdcb        128     bytes   modified.bin    block=28        [1835008,1900544)
+7340b08fd7274ecd2b557add2c407410        128     bytes   modified.bin    block=29        [1900544,1966080)
+25aa8f17dafbd188a2a2f2cda93fc667        128     bytes   modified.bin    block=30        [1966080,2031616)
+098a66509b8331cd67f92f8fbe02e712        128     bytes   modified.bin    block=31        [2031616,2097152)
 
 Note: After running the following commands:
  1) head -c 2M /dev/urandom > base.bin
@@ -77,19 +77,19 @@ If we then run simhash_complete_chunked.py with these files as input, the SimHas
 slightly different. Consider the Hamming distance, chunk by chunk:
 
 Block 4 [262144, 327680): 10 bits
-base 00d86734259c9b164b68d2e34fd0d041
-mod  00d8673525d89b5e4d4892e34fd0c041
+base c5a4860acc182e79c0d3e330ea6850e2
+mod  c5a4870acc182e79c0d3e320ca695046
 
 Block 15 [983040, 1048576): 10 bits
-base 01d1c8961c5364d9ac9abce1551ce635
-mod  01d9ca960c51745bac9abce0553cf635
+base fa792890b03704c93a12aac830881c74
+mod  ba792890b03725d93a92acc210881c74
 
 Block 24 [1572864, 1638400): 13 bits
-base eee6043493b54bbb5fe5e19a75ae24a1
-mod  afe60c5491b747bb5fe5c19a7daea0a1
+base 743fc6f909002c557255f198d56459f1
+mod  743f46d9082028d57255f198d56879f0
 
 If we concatenate the 32 per-block SimHashes for each file (each SimHash is 16 bytes, so 32 × 16 = 512 bytes per file), 
-the Hamming distance between the two 512-byte sequences is 33 bits.
+the Hamming distance between the two 512-byte sequences is 27 bits.
 
 Some calculations:
 
@@ -98,4 +98,4 @@ Some calculations:
 3) 16M / 48K =~ 333 (ratio)
 
 4) 512 bytes (dimension of the simhashes concatenated) = 512*8 bits = 4096 bits
-5) 4096 / 33 =~ 124 (ratio)
+5) 4096 / 27 =~ 151 (ratio)
